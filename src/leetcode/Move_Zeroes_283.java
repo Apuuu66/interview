@@ -12,7 +12,7 @@ package leetcode;
  * 必须在原数组上操作，不要为一个新数组分配额外空间。
  * 尽量减少操作总数。
  */
-public class MoveZeroes_283 {
+public class Move_Zeroes_283 {
     public void moveZeroes(int[] nums) {
 //       nums中，[0...k)的元素均为非零元素
         int k = 0;

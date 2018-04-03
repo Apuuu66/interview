@@ -13,7 +13,7 @@ package leetcode;
  * 给定 nums = [3,2,2,3]，val = 3，
  * 你的函数应该返回 长度 = 2，数组的前两个元素是 2。
  */
-public class RemoveElement_27 {
+public class Remove_Element_27 {
     public int removeElement(int[] nums, int val) {
         return 0;
     }

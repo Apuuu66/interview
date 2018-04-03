@@ -14,7 +14,7 @@ package leetcode;
  * 输入：数组 = {2, 7, 11, 15}, 目标数 = 9
  * 输出：index1 = 1, index2 = 2
  */
-public class TwoSum_II_167 {
+public class Two_Sum_II_167 {
     public int[] twoSum(int[] numbers, int target) {
         int l = 0, r = numbers.length - 1;
         while (l < r) {

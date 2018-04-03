@@ -13,7 +13,7 @@ package leetcode;
  * 你的函数应该返回新长度 2, 并且原数组nums的前两个元素必须是1和2
  * 不需要理会新的数组长度后面的元素
  */
-public class RemoveDuplicatesfromSortedArray_26 {
+public class Remove_Duplicates_from_SortedArray_26 {
     public int removeDuplicates(int[] nums) {
         return 0;
     }

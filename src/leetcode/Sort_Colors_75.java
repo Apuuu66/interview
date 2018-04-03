@@ -6,7 +6,7 @@ import org.junit.Test;
  * Created by IntelliJ IDEA.
  * User: porker
  * Date: 2018/4/3
- * 75. Sort Colors
+ * 75. 分类颜色
  * 题目描述:
  * 给定一个包含红色、白色和蓝色，且含有 n 个元素的数组，对它们进行排序，
  * 使得相同颜色的元素相邻，颜色顺序为红色、白色、蓝色。
@@ -14,7 +14,7 @@ import org.junit.Test;
  * 注意:
  * 不能使用代码库中的排序函数来解决这道题。
  */
-public class SortColors_75 {
+public class Sort_Colors_75 {
     public void sortColors(int[] nums) {
         //采用三路快排中的一次partition，将数组分割成三部分
         //[0...l]存放0，[r...n-1]存放2，中间部分是0。
