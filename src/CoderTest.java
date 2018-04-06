@@ -60,9 +60,8 @@ public class CoderTest {
 		System.out.println(code_9.JumpFloorII(7));
 		System.out.println(code_9.JumpFloorII(8));
 	}
-
 	@Test
-	public void t_Code_10() {
+	public void testCoderTest(){
 
 	}
 }
