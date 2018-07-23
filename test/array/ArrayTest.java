@@ -13,9 +13,9 @@ public class ArrayTest {
 
     @Test
     public void testArray() {
-        Array array = new Array(20);
+        Array array = new Array(5);
         for (int i = 0; i < 10; i++) {
-            array.add(i);
+            array.addLast(i);
         }
         array.add(100,2);
         array.remove(2);

@@ -8,6 +8,7 @@ package array;
 public class Array<E> {
     private E[] data;
     private int size;//数组中已存放元素的个数
+    private final int resize = 2;
 
     public Array(int capacity) {
         this.size = capacity;
@@ -34,9 +35,10 @@ public class Array<E> {
     }
 
     //向数组末尾添加元素
-    public void add(E element) {
+    public void addLast(E element) {
         if (size == data.length) {
-            throw new IllegalArgumentException("AddLast failed. Array is full");
+            resize(resize * data.length);
+//            throw new IllegalArgumentException("Add failed. Array is full");
         }
         data[size] = element;
         size++;
@@ -44,17 +46,28 @@ public class Array<E> {
 
     //向指定位置添加元素
     public void add(E element, int index) {
-        if (size == data.length) {
-            throw new IllegalArgumentException("Add failed. Array is full");
-        }
         if (index < 0 || index > size) {
             throw new IllegalArgumentException("Add failed! Require index > 0 && index < size");
         }
+
+        if (size == data.length) {
+            resize(resize * data.length);
+//            throw new IllegalArgumentException("Add failed. Array is full");
+        }
+
         for (int i = size - 1; i >= index; i--) {
             data[i + 1] = data[i];
         }
         data[index] = element;
         size++;
+    }
+
+    private void resize(int newCapacity) {
+        E[] newData = (E[]) new Object[newCapacity];
+        for (int i = 0; i < size; i++) {
+            newData[i] = data[i];
+        }
+        data = newData;
     }
 
     @Override
@@ -116,6 +129,9 @@ public class Array<E> {
         }
         size--;
         data[size] = null;
+        if (size == data.length / 4 && data.length / 2 != 0) {
+            resize(data.length / 2);
+        }
         return ret;
     }
 
@@ -125,4 +141,22 @@ public class Array<E> {
             remove(index);
         }
     }
+
+    public E removeLast() {
+
+        return remove(size - 1);
+    }
+
+    public E getLast() {
+        return get(size - 1);
+    }
+
+    public E getFirst() {
+        return get(0);
+    }
+
+    public E removeFirst() {
+        return remove(0);
+    }
+
 }
