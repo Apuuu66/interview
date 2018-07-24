@@ -3,6 +3,13 @@ package oo;
 
 public class A {
     int a = 3;
+
+    public A() {
+
+    }
+
+    public A(String wang, int i) {
+    }
 }
 
 class B extends A {
@@ -13,8 +20,6 @@ class B extends A {
         System.out.println(b.a);
         A a = new B();
         System.out.println(a.a);
-        Object o = new Object();
-        String s = new String();
-        s.equals(null);
+
     }
 }

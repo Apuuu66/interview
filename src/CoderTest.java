@@ -1,5 +1,4 @@
-
-import hash.A;
+import oo.A;
 import org.junit.Test;
 import sword2offer.*;
 
